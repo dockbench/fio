@@ -1,0 +1,17 @@
+[global]
+filename=/target/fio
+direct=1
+size=16G
+runtime=60
+time_based=1
+group_reporting=1
+
+[randread]
+filename=/target/fio
+direct=1
+size=1G
+runtime=60
+time_based=1
+rw=randread
+bs=4k
+numjobs=128

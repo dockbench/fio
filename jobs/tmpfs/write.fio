@@ -1,0 +1,12 @@
+[global]
+filename=/target/fio
+direct=0
+size=1G
+runtime=60
+time_based=1
+group_reporting=1
+
+[write]
+rw=write
+bs=1M
+numjobs=1
