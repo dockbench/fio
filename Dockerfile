@@ -1,6 +1,9 @@
-FROM alpine:3.10.1
+FROM centos:7
 
-RUN apk add --no-cache fio
+RUN yum update -y \
+    && yum install -y fio \
+    && rm -rf /var/cache/yum/* \
+    && yum clean all
 
 COPY ./jobs/ /jobs/
 VOLUME /jobs
