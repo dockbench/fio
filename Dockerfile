@@ -1,9 +1,6 @@
-FROM ubuntu:18.04
+FROM alpine:3.10.1
 
-RUN apt-get update -y \
-    && apt-get install -y fio \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache fio
 
 COPY ./jobs/ /jobs/
 VOLUME /jobs
